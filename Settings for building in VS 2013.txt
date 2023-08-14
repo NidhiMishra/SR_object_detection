@@ -1,0 +1,23 @@
+1) CUDA version change
+
+open the YOLO9000.vcxproj and YOLO9000.vcxproj.filters in "G:\IMI-PROJECTS\i2p_Nadine_Robot\development\i2p_perception\i2p_object_detection\build\YOLO9000_with_cam\YOLO9000"
+search for CUDA in these files changes the version according to your PC.
+
+2) PCL installation
+
+PCL is necessary for installation.
+The required PCL 1.7.2 is present in the i2p_object_detection folder.
+
+3) Changes to be made in YOLO9000 vs2013 solution
+
+Include directories, Linker library include directories for PCL and 3rd party files have to be changed according to the PC if necessary.
+<include> directories from PCL, FLANN, Qhull, VTK, Eigen
+Linker directories for PCL, FLANN, Qhull, VTK
+
+Make sure the vs2013 update 5 is running in the PC. Please update to vs2013 update 5 if not before building
+After this the build should be fine and exe should be created.
+
+4) Changes to PATH environment variable
+
+This is to make sure required dlls are loaded when the exe is run.
+bin directories of PCL, FLANN, Qhull and VTK need to be included to Path.
